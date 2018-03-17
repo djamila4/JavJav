@@ -1,5 +1,13 @@
 package sn.objis.gestionrestauration.domaine;
 
+/**
+ * @author user
+ * @version 1.0
+ * @since 
+ * 
+ * 
+ *
+ */
 public class Commande {
 	
 	/**

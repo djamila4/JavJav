@@ -1,79 +1,39 @@
 package sn.objis.gestionrestauration.domaine;
 
-public class PetitDejeuner extends Commande {
+public class PetitDejeuner extends Repas {
 	
+	private String titre = "Petit Dejeuner";
+
+	/*private int prixMenu1 = this.getPrixMenu1();
+	private int prixMenu2 = this.getPrixMenu2();
+	private int prixMenu3 = this.getPrixMenu3();*/
 	/**
 	 * 
 	 */
-	private String baguette;
-	private String tartines;
-	private String viennoiseries;
-	private String jus;
-	private String cafe;
-	
-	/**
-	 * 
-	 */
-	public PetitDejeuner(){}
-	
-	public PetitDejeuner(int prix, String date, int nbCommande,String baguette, String tartines, String viennoiseries, String jus, String cafe){
-
-		super(prix, date, nbCommande);
-		this.baguette = baguette;
-		this.tartines = tartines;
-		this.viennoiseries = viennoiseries;
-		this.jus = jus;
-		this.cafe = cafe;
+	public PetitDejeuner() {
+		// TODO Auto-generated constructor stub
 	}
 	
 	/**
-	 * 
-	 * @return
+	 * @param titre
 	 */
-
-	public String getBaguette() {
-		return baguette;
+	public PetitDejeuner(String titre) {
+		this.titre = titre;
 	}
 
-	public String getTartines() {
-		return tartines;
-	}
-
-	public String getViennoiseries() {
-		return viennoiseries;
-	}
-
-	public String getJus() {
-		return jus;
-	}
-
-	public String getCafe() {
-		return cafe;
+	/**
+	 * @param menu1
+	 * @param menu2
+	 * @param menu3
+	 * @param titre
+	 */
+	public PetitDejeuner(String menu1, String menu2, String menu3) {
+		super(menu1, menu2, menu3);
 	}
 	
-	/**
-	 * 
-	 * @param baguette
-	 */
-
-	public void setBaguette(String baguette) {
-		this.baguette = baguette;
+	public String toString(){
+		String etatDeObjet = "Menu du "+ this.titre+": \n" +"1:"+ this.getMenu1()+ " ->500fr \n"+"2:"+ this.getMenu2()+ " ->1000fr \n"+"3:"+ this.getMenu3()+ " ->";
+		return etatDeObjet;	
 	}
-
-	public void setTartines(String tartines) {
-		this.tartines = tartines;
-	}
-
-	public void setViennoiseries(String viennoiseries) {
-		this.viennoiseries = viennoiseries;
-	}
-
-	public void setJus(String jus) {
-		this.jus = jus;
-	}
-
-	public void setCafe(String cafe) {
-		this.cafe = cafe;
-	}
-
+	
 }
