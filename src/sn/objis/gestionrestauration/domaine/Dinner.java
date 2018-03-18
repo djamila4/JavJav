@@ -31,7 +31,7 @@ public class Dinner extends Repas {
 		super(menu1, menu2, menu3);
 	}
 	public String toString(){
-		String dinn = "Menu du "+ this.titre+ ": \n" + this.getMenu1()+" \n"+ this.getMenu2()+" \n"+ this.getMenu3();
+		String dinn = "Menu du "+ this.titre+ ": \n1:" + this.getMenu1()+" \n2:"+ this.getMenu2()+" \n3:"+ this.getMenu3();
 		return dinn ;
 		}
 	

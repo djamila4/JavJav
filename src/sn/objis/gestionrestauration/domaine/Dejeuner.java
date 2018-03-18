@@ -33,7 +33,7 @@ public class Dejeuner extends Repas {
 	}
 	
 	public String toString(){
-		String dej = "Menu du "+ this.titre+ ": \n"   + this.getMenu1()+" \n"+ this.getMenu2()+" \n"+ this.getMenu3();
+		String dej = "Menu du "+ this.titre+ ": \n1:"   + this.getMenu1()+" \n2:"+ this.getMenu2()+" \n3:"+ this.getMenu3();
 		return dej;
 		
 	}

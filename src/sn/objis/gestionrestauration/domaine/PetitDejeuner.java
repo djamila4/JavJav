@@ -32,7 +32,7 @@ public class PetitDejeuner extends Repas {
 	}
 	
 	public String toString(){
-		String etatDeObjet = "Menu du "+ this.titre+": \n" +"1:"+ this.getMenu1()+ " ->500fr \n"+"2:"+ this.getMenu2()+ " ->1000fr \n"+"3:"+ this.getMenu3()+ " ->";
+		String etatDeObjet = "Menu du "+ this.titre+": \n" +"1:"+ this.getMenu1()+ " ->500fr \n"+"2:"+ this.getMenu2()+ " ->1000fr \n"+"3:"+ this.getMenu3()+ " ->800fr";
 		return etatDeObjet;	
 	}
 	

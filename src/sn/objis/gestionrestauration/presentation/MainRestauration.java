@@ -9,7 +9,7 @@ public class MainRestauration {
 		ServiceRestauration sr = new ServiceRestauration();
 		PetitDejeuner ptd1 = new PetitDejeuner("Omelettes", "Sandwich", "Croissant");
 		Dejeuner deje = new Dejeuner("Riz au poisson ", "Riz au viande ", "Poulet");
-		Dinner dinne = new Dinner("Salade ordinnaire ", " Gratin de légumes à l'emmental léger ", "Papillote de poisson maigre aux petits légumes");
+		Dinner dinne = new Dinner("Salade ordinnaire ", "Gratin de légumes à l'emmental léger ", "Papillote de poisson maigre aux petits légumes");
 		System.out.println("Bienvenu/Welcome");
 		System.out.println("Tapez 1 : pour commande petit dejeuner");
 		System.out.println("Tapez 2 : pour commande dejeuner");
@@ -34,16 +34,32 @@ public class MainRestauration {
 			
 		b = sc.nextInt();
 		if(b == 1){
-			System.out.println("Vous avez choisi le menu Omelette a 500fr \n Voulez-vous faire une autre commande");
+			System.out.println("Vous avez choisi le menu Omelette a 500fr.\n Voulez-vous faire une autre commande.");
 			
 		}else if(b == 2){
-			System.out.println("Vous avez choisi le menu Sandwich a 1000fr");
+			System.out.println("Vous avez choisi le menu Sandwich a 1000fr.\n Voulez-vous faire une autre commande.");
 		}else if(b == 3){
-			System.out.println("Vous avez choisi le menu Croissant a 800fr");
+			System.out.println("Vous avez choisi le menu Croissant a 800fr.\n Voulez-vous faire une autre commande.");
 		}else{
 				System.out.println("Erreur :Tapez le numero correspondant pour choisir un menu");
 		}
-		}while(b != 1 || b != 2 || b!=3);
-	} 
+		}while(b != 1 || b != 2 || b!=3); 
+		
+		int c;
+		do{
+		c = sc.nextInt();
+		if(c == 1){
+			System.out.println("Vous avez choisi le menu Riz au poisson a 1000fr.\n Voulez-vous faire une autre commande.");
+			
+		}else if(c == 2){
+			System.out.println("Vous avez choisi le menu Riz au viande a 1500fr.\n Voulez-vous faire une autre commande.");
+		}else if(c == 3){
+			System.out.println("Vous avez choisi le menu Poulet a 2500fr.\n Voulez-vous faire une autre commande.");
+		}else{
+				System.out.println("Erreur :Tapez le numero correspondant pour choisir un menu");
+		}
+		}while(c != 1 || c != 2 || c != 3); 
+		
+		}
+  }
 
-}
