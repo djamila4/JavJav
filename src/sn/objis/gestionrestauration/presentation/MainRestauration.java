@@ -1,4 +1,5 @@
 package sn.objis.gestionrestauration.presentation;
+import sn.objis.gestionrestauration.service.*;
 import java.util.Scanner;
 
 import sn.objis.gestionrestauration.domaine.*;
@@ -6,60 +7,59 @@ import sn.objis.gestionrestauration.service.*;
 public class MainRestauration {
 
 	public static void main(String[] args) {
-		ServiceRestauration sr = new ServiceRestauration();
-		PetitDejeuner ptd1 = new PetitDejeuner("Omelettes", "Sandwich", "Croissant");
-		Dejeuner deje = new Dejeuner("Riz au poisson ", "Riz au viande ", "Poulet");
-		Dinner dinne = new Dinner("Salade ordinnaire ", "Gratin de légumes à l'emmental léger ", "Papillote de poisson maigre aux petits légumes");
+		
 		System.out.println("Bienvenu/Welcome");
 		System.out.println("Tapez 1 : pour commande petit dejeuner");
 		System.out.println("Tapez 2 : pour commande dejeuner");
 		System.out.println("Tapez 3 : pour commande dinner");
 		Scanner sc = new Scanner(System.in);
+		ServiceRestauration sr= new ServiceRestauration();
+		PetitDejeuner ptd1 = new PetitDejeuner();
+		Dejeuner deje = new Dejeuner();
+		Dinner dinne = new Dinner();
+		Client client = new Client();
+		
 		int a;
 		a = sc.nextInt();
+		if(a == 1){
+		   sr.Menu1(ptd1);
+	    }else if(a == 2){
+	    	sr.Menu2(deje); 	
+	    }else if(a == 3){
+	    	sr.Menu3(dinne);
+	    }else{
+	    	System.out.println("Erreur: le chiffre que vous avez taper ne correspond a aucun menu");
+	    }
 		
-			if(a == 1){
-			System.out.println(ptd1.toString());
-		}else if(a==2){
-			System.out.println(deje.toString());
-		}else if(a==3){
-			System.out.println(dinne.toString());
-		}else{
-			System.out.println("Veuillez choisir un numéro correspondant a un menu");
-		}
-			
-		System.out.println("Tapez le numero correspondant pour choisir un menu");
 		int b;
-		do{
-			
 		b = sc.nextInt();
 		if(b == 1){
-			System.out.println("Vous avez choisi le menu Omelette a 500fr.\n Voulez-vous faire une autre commande.");
-			
+			sr.SousMenu1(ptd1, 1);
 		}else if(b == 2){
-			System.out.println("Vous avez choisi le menu Sandwich a 1000fr.\n Voulez-vous faire une autre commande.");
+			sr.SousMenu2(deje, 2);
 		}else if(b == 3){
-			System.out.println("Vous avez choisi le menu Croissant a 800fr.\n Voulez-vous faire une autre commande.");
+			sr.SousMenu3(dinne, 3);
 		}else{
-				System.out.println("Erreur :Tapez le numero correspondant pour choisir un menu");
-		}
-		}while(b != 1 || b != 2 || b!=3); 
+	    	System.out.println("Erreur: le chiffre que vous avez taper ne correspond a aucun menu");
+	    }
+		System.out.println("Afin de confirmer la commande veuiller saisir les indications suivantes");
+        System.out.println("Vorte nom svp");
+        String info;
+        info = sc.nextLine();
+		client.setNom(info);
+		sc.nextLine();
+        System.out.println("Vorte prenom svp");
+        info = sc.nextLine();
+		client.setPrenom(info);
+        System.out.println("Vorte adresse svp");
+        info = sc.nextLine();
+		client.setAdresse(info);
+        System.out.println("Vorte numéro de telephone svp");
+        info = sc.nextLine();
+	    client.setNumTel(info);
+        System.out.println(client.toString());
+
+	}
 		
-		int c;
-		do{
-		c = sc.nextInt();
-		if(c == 1){
-			System.out.println("Vous avez choisi le menu Riz au poisson a 1000fr.\n Voulez-vous faire une autre commande.");
-			
-		}else if(c == 2){
-			System.out.println("Vous avez choisi le menu Riz au viande a 1500fr.\n Voulez-vous faire une autre commande.");
-		}else if(c == 3){
-			System.out.println("Vous avez choisi le menu Poulet a 2500fr.\n Voulez-vous faire une autre commande.");
-		}else{
-				System.out.println("Erreur :Tapez le numero correspondant pour choisir un menu");
-		}
-		}while(c != 1 || c != 2 || c != 3); 
-		
-		}
-  }
+}
 

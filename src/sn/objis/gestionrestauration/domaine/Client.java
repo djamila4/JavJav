@@ -7,7 +7,7 @@ public class Client {
 	 */
 	private String nom;
 	private String prenom;
-	private double numTel;
+	private String numTel;
 	private String adresse;
 	
 	/**
@@ -15,7 +15,7 @@ public class Client {
 	 */
 	public Client(){}
 	
-	public Client(String nom, String prenom, double numTel, String adresse){
+	public Client(String nom, String prenom, String numTel, String adresse){
 		this.nom = nom;
 		this.prenom = prenom;
 		this.numTel = numTel;
@@ -35,7 +35,7 @@ public class Client {
 		return prenom;
 	}
 
-	public double getNumTel() {
+	public String getNumTel() {
 		return numTel;
 	}
 
@@ -56,12 +56,17 @@ public class Client {
 		this.prenom = prenom;
 	}
 
-	public void setNumTel(double numTel) {
+	public void setNumTel(String numTel) {
 		this.numTel = numTel;
 	}
 
 	public void setAdresse(String adresse) {
 		this.adresse = adresse;
+	}
+	
+	public String toString(){
+		String c=this.getNom()+" ,"+ this.getPrenom()+" ,"+ this.getAdresse()+" ,"+this.getNumTel()+". Votre commande a bien été prise en compte \n Merci a la prochaine";
+				return c;
 	}
 
 

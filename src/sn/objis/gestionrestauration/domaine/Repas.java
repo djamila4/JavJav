@@ -1,10 +1,10 @@
-/**
- * 
- */
+
 package sn.objis.gestionrestauration.domaine;
 
 /**
- * @author user
+ * @since 20/03/2018
+ * @version 1.0
+ * @author Houleye SOW
  *
  */
 public class Repas {
@@ -104,7 +104,4 @@ public class Repas {
 		this.prixMenu3 = prixMenu3;
 	}
 	
-	
-	
-
 }

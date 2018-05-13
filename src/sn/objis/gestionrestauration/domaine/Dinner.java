@@ -1,7 +1,7 @@
 package sn.objis.gestionrestauration.domaine;
 /**
  * 
- * @author user
+ * @see Repas
  *
  */
 public class Dinner extends Repas { 
@@ -31,7 +31,7 @@ public class Dinner extends Repas {
 		super(menu1, menu2, menu3);
 	}
 	public String toString(){
-		String dinn = "Menu du "+ this.titre+ ": \n1:" + this.getMenu1()+" \n2:"+ this.getMenu2()+" \n3:"+ this.getMenu3();
+		String dinn ="Menu du "+ this.titre+": \n" +"1:"+ this.getMenu1()+" "+ this.getPrixMenu1()+ " \n"+"2:"+ this.getMenu2()+" "+this.getPrixMenu2()+" \n"+"3:"+ this.getMenu3()+" "+this.getPrixMenu3();
 		return dinn ;
 		}
 	
